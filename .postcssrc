@@ -1,0 +1,23 @@
+{
+  "plugins": {
+    "postcss-import": {},
+    "postcss-mixins": {},
+    "postcss-for": {},
+    "postcss-preset-env": {
+      "stage": 0,
+      "features": {
+        "autoprefixer": false,
+        "custom-properties": {
+          "preserve": false
+        }
+      }},
+    "postcss-color-function": {},
+    "postcss-extend": {},
+    "postcss-calc": {},
+    "postcss-easing-gradients": {},
+    "postcss-object-fit-images": {},
+    "autoprefixer": {
+      grid: true
+    }
+  }
+}
