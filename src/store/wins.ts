@@ -47,6 +47,15 @@ export function checkWinner (): CheckWinnerAction {
     const { cells, wins } = getState()
 
     if (wins && wins.length) {
+      const result = wins.find(win => {
+        return win.cells.every((cell, index) => {
+          return !cell || cell === cells[index]
+        })
+      })
+
+      result && dispatch(setWinner(result))
+
+      /*
       for (let i = 0; i < wins.length; i++) {
         let result = true
 
@@ -62,6 +71,7 @@ export function checkWinner (): CheckWinnerAction {
           break
         }
       }
+      */
     }
   }
 }
